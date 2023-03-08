@@ -42,21 +42,22 @@ class Conta:
         return self.__saldo
         # conta1.get_saldo()
 
-
+    
     def get_titular(self):
         return self.__titular
         # conta1.get_titular()
 
-
-    def get_limite(self):
+    @property
+    def limite(self):
         return self.__limite
-        # conta1.get_limite()
+        # conta1.limite
     
     # metodos para alterar algum valor do objeto
     # set: nunca retorna nada, apenas altera o valor
-    def set_limite(self, limite):
+    @limite.setter
+    def limite(self, limite):
         self.__limite = limite
-        # conta1.set_limite(10000)
+        # conta1.limite = 2000
 
     # agora com os __ antes do atributo, eles seriam chamados no terminal como '_Classe__atributo', 
     # indicando q sao privados e deveriam ser modificados atraves dos metodos-
