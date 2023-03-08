@@ -38,12 +38,14 @@ class Conta:
 
     # metodos para consultar valores do objeto
     # get: eh a convencao pra td metodo q retorna algo
-    def get_saldo(self): 
+    # com as properties nao precisamos mais declarar get ou set no inicio
+    @property
+    def saldo(self): 
         return self.__saldo
         # conta1.get_saldo()
 
-    
-    def get_titular(self):
+    @property
+    def titular(self):
         return self.__titular
         # conta1.get_titular()
 
