@@ -23,10 +23,16 @@ class Conta:
         print(f'Titular: {self.__titular} // Voce depositou R$ {valor} e agora seu saldo é de R$ {self.__saldo}')
         # conta1.deposita(20)
 
+    def pode_sacar(self, valor_saque):
+        saque_disponivel =  self.__saldo + self.__limite
+        return valor_saque <= saque_disponivel
 
     def saca(self, valor):
-        self.__saldo -= valor
-        print(f'Titular: {self.__titular} // Voce sacou R$ {valor} e agora seu saldo é de R$ {self.__saldo}')
+        if self.pode_sacar(valor):
+            self.__saldo -= valor
+            print(f'Titular: {self.__titular} // Voce sacou R$ {valor} e agora seu saldo é de R$ {self.__saldo}')
+        else:
+            print(f'O valor R$ {valor} ultrapassa o limite.')
         # conta1.saca(20)
 
 
