@@ -67,5 +67,14 @@ class Conta:
         self.__limite = limite
         # conta1.limite = 2000
 
+    @staticmethod # metodo da classe e nao do objeto
+    def codigo_banco_X():
+        return '0001'
+    
+
+    @staticmethod # metodo da classe e nao do objeto
+    def codigos_bancos():
+        return {'X': '0001', 'Y': '0002', 'Z': '0003'}
+
     # agora com os __ antes do atributo, eles seriam chamados no terminal como '_Classe__atributo', 
     # indicando q sao privados e deveriam ser modificados atraves dos metodos-
